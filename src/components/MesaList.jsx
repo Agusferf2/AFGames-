@@ -8,6 +8,7 @@ import {
   serverTimestamp,
 } from "firebase/firestore";
 import { addHours, isAfter } from "date-fns";
+import Header from "./Header";
 
 function MesasList() {
   const [mesas, setMesas] = useState([]);
@@ -77,7 +78,13 @@ function MesasList() {
   };
 
   return (
-    <div>
+    <div className="bg-gray-800">
+      <Header list={[
+        { label: "Inicio", url: "/home" },
+        { label: "Disponibilidad", url: "/mesas" },
+        { label: "Servicios", url: "#servicios" },  
+        { label: "Contacto", url: "#contacto" }
+      ]}/>
       <h2>Disponibilidad de Mesas</h2>
       <ul>
         {mesas.map((mesa) => (
