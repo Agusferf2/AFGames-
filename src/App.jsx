@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../config/firebase";
 import Login from "./components/Login";
-import MesasList from "./components/MesaList";
+import MesasList from "./pages/MesaList";
 import Home from "./pages/Home";
 
 function App() {
