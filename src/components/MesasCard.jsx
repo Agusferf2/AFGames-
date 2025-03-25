@@ -1,9 +1,11 @@
-import React from "react";
-import { db } from "../../config/firebase";
+import { db, auth } from "../../config/firebase";
 import { doc, updateDoc, serverTimestamp } from "firebase/firestore";
 import { addHours } from "date-fns";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 export default function MesasCard(props) {
+  const [user] = useAuthState(auth);
+
   // Función para cambiar el estado de una mesa
   const cambiarEstado = async (id, estadoActual) => {
     try {
@@ -59,6 +61,7 @@ export default function MesasCard(props) {
         </p>
       </div>
       <div className="p-6 pt-0">
+        {user ? (
         <button
           data-ripple-light="true"
           type="button"
@@ -66,7 +69,7 @@ export default function MesasCard(props) {
           className="select-none rounded-lg bg-green-700 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
         >
           {props.mesa.estado === "disponible" ? "Ocupar" : "Liberar"}
-        </button>
+        </button>): null}
       </div>
     </div>
   );
