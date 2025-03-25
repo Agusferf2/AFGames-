@@ -19,14 +19,7 @@ export default function Home() {
           Ver disponibilidad de mesas
         </Link>
       </section>
-      <section id="servicios" className='w-full h-full flex justify-start flex-col gap-5 p-10 bg-gradient-to-br from-green-950 to-green-600'>
-        <h1 className='font-Kanit text-4xl font-bold text-white'>Servicios disponibles</h1>
-        <div className='flex flex-row justify-around h-10/12 '>
-        <ServiceCard img={"snacks-drinks.jpg"} description={"Venta de snacks y bebidas"}/>
-        <ServiceCard img={"tableFriends.jpeg"} description={"Mesas disponibles"}/>
-        <ServiceCard img={"juegosDeMesa.jpeg"} description={"Prestacion de juegos de mesa"}/>
-        </div>
-      </section>
+        <ServiceCard />
     </div>
     
   )
