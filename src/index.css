@@ -3,6 +3,7 @@
 
 :root{
     scroll-behavior: smooth;
+    background-color: #101828;
 }
 @theme {
   --font-Kanit: "Kanit", sans-serif; 

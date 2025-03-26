@@ -2,17 +2,19 @@ import { Link } from "react-router-dom";
 import Header from '../components/Header'
 import imgs from '../assets/background-billar.jpg'
 import ServiceCard from '../components/ServiceCard';
+import Testimonials from '../components/Testimonios.jsx'
+import Footer from '../components/Footer.jsx'
 
 export default function Home() {
   return (
-    <div className='w-full h-[90vh] bg-cover bg-center' style={{ backgroundImage: `url(${imgs})` }}>
+    <div className='w-full h-[90vh] ' >
       <Header list={[
         { label: "Inicio", url: "#inicio" },
         { label: "Disponibilidad", url: "/mesas" },
         { label: "Servicios", url: "#servicios" },  
-        { label: "Contacto", url: "#contacto" }
+        { label: "Testimonios", url: "#testimonios" }
       ]}/>
-      <section id="Inicio" className='w-full h-full flex justify-center flex-col gap-5 items-start p-10'>
+      <section id="inicio" className='w-full h-full bg-cover bg-center flex justify-center flex-col gap-5 items-start p-10' style={{ backgroundImage: `url(${imgs})`}}>
         <h1 className='font-Kanit text-5xl font-bold text text-white'>Bienvenido a <span className='text-green-500'>A&F Games</span></h1>
         <p className="text-5xl md:text-xl max-w-2xl text-white">Disfruta de un ambiente único para jugar billar con amigos. Consulta la disponibilidad de mesas en tiempo real.</p>
         <Link to="/mesas" className="bg-green-800 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition">
@@ -20,6 +22,9 @@ export default function Home() {
         </Link>
       </section>
         <ServiceCard />
+        <hr className="border-gray-600 w-1/2 mx-auto my-1" />
+        <Testimonials />
+        <Footer />
     </div>
     
   )

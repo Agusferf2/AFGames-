@@ -36,16 +36,14 @@ export default function MesasCard(props) {
     <div className="flex w-80 m-10 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
       <img
         src={props.mesa.img}
-        className="mx-4 -mt-6 h-40 rounded-xl shadow-xl"
+        className="mx-4 -mt-6 h-40 rounded-xl bg-cover shadow-xl"
       ></img>
       <div className="p-6">
-        <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+        <h5 className="mb-2 block font-Kanit text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
           {props.mesa.nombre}
         </h5>
-        <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-          Estado: {props.mesa.estado}
-        </p>
-        <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+        {props.mesa.estado==="ocupada" ? <p className="bg-red-200 rounded-2xl p-2 text-center my-2">Estado: Ocupado</p>: <p className="bg-green-200 rounded-2xl p-2 text-center my-2">Estado: Disponible</p>}
+        <p className="bg-gray-300 rounded-2xl p-2 text-center">
           El turno termina a las:{" "}
           {!props.mesa.finOcupacion
             ? "-"

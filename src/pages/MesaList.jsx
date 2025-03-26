@@ -4,6 +4,7 @@ import { collection, doc, updateDoc, onSnapshot } from "firebase/firestore";
 import { isAfter } from "date-fns";
 import Header from "../components/Header";
 import MesasCard from "../components/MesasCard";
+import Footer from "../components/Footer";
 
 function MesasList() {
   const [mesas, setMesas] = useState([]);
@@ -62,6 +63,7 @@ function MesasList() {
           ))}
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }
