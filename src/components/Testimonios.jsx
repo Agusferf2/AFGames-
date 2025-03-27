@@ -26,9 +26,9 @@ export default function Testimonials() {
           <h2 className="text-green-400 text-lg font-semibold">TESTIMONIOS</h2>
           <h3 className="text-2xl font-bold mt-2">QUE DICEN DE NOSOTROS</h3>
         </div>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-8">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-8 ">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gray-800 p-6 rounded-lg text-center w-80">
+            <div key={index} className="bg-gray-800 p-6 rounded-lg text-center w-80 max-sm:w-10/12">
               <p className="text-gray-300 mb-4">"{testimonial.text}"</p>
               <div className="flex justify-center">
                 <img

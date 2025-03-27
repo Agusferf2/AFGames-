@@ -2,6 +2,7 @@ import { useState } from "react";
 import { auth } from "../../config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import imgs from '../assets/background-billar-login.jpg'
+import Header from "../components/Header";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -19,9 +20,15 @@ function Login() {
   };
 
   return (
+    <>
+      <Header 
+      list={[
+        { label: "Inicio", url: "/home" },
+        { label: "Disponibilidad", url: "/mesas" },
+      ]}/>
     <div className="flex flex-col items-center h-screen justify-center bg-cover bg-center" style={{ backgroundImage: `url(${imgs})` }}>
-      <div className="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6 ">
-        <h2 className="text-2xl font-bold text-gray-200 mb-4">
+      <div className="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6 max-sm:w-11/12">
+        <h2 className="text-2xl font-bold text-gray-200 mb-4 max-sm:text-center">
           Iniciar Sesión
         </h2>
         <form onSubmit={handleLogin} className="flex flex-col gap-3">
@@ -51,6 +58,7 @@ function Login() {
         </form>
       </div>
     </div>
+    </>
   );
 }
 

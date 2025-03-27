@@ -53,11 +53,11 @@ function MesasList() {
         ]}
       />
       <div className="pt-20">
-        <h2 className="text-4xl font-bold mb-4 text-white text-center">
+        <h2 className="text-4xl font-bold mb-4 text-white text-center max-lg:text-3xl">
           Disponibilidad de Mesas
         </h2>
         <hr className="border-t-4 border-green-800 mb-4 w-3/12 mx-auto" />
-        <div className="grid grid-cols-3 w-full justify-items-center">
+        <div className="grid grid-cols-3 w-full justify-items-center max-lg:grid-cols-2 max-sm:grid-cols-1">
           {mesas.map((mesa) => (
             <MesasCard key={mesa.id} mesa={mesa} />
           ))}
