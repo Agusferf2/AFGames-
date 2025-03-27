@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { auth } from "../../config/firebase";
+import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import imgs from '../assets/background-billar-login.jpg'
 import Header from "../components/Header";
@@ -8,12 +9,13 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      window.location.href = "/home";
+      navigate("/home");
     } catch (error) {
       setError("Error al iniciar sesión: " + error.message);
     }
