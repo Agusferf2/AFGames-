@@ -11,7 +11,7 @@ export default function Header({list}) {
     };
   return (
     <div className="flex justify-between px-4 py-6 w-full items-center backdrop-blur-md fixed max-sm:py-4">
-        <h1 className="font-black text-3xl text-white max-sm:text-2xl"><span className="text-green-500">A&F</span> Games</h1>
+        <a className="font-black text-3xl text-white max-sm:text-2xl" href="/home"><span className="text-green-500">A&F</span> Games</a>
         <ul className=" text-white flex justify-end items-center gap-4">
         {list.map((item, index) => (
           <li key={index} className="max-md:hidden">

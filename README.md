@@ -1,12 +1,17 @@
-# React + Vite
+# 🎱 Aplicación de Gestión de Mesas de Billar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta aplicación soluciona un problema común en los locales de billar: la acumulación de personas esperando una mesa. Con esta plataforma, los clientes pueden revisar la disponibilidad de mesas en tiempo real antes de acudir al local, optimizando su tiempo y mejorando la experiencia del usuario.
 
-Currently, two official plugins are available:
+## 🚀 Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📌 **Visualización de Mesas Disponibles**: Muestra las mesas libres para jugar.
+- ⏳ **Visualización de turnos**: Controla la hora de inicio y fin de cada ocupación.
+- 🔐 **Autenticación con Firebase**: Inicio de sesión seguro con Firebase Authentication.
+- 🎨 **Interfaz moderna y responsiva**: Diseñada con **React** y **Tailwind CSS**.
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías Utilizadas
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ **React** - Framework principal.
+- 🎨 **Tailwind CSS** - Estilos rápidos y modernos.
+- 🔥 **Firebase** - Autenticación y base de datos en tiempo real.
+- 🌐 **React Router** - Navegación entre secciones.
