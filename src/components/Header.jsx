@@ -26,6 +26,7 @@ export default function Header({list}) {
             )}
           </li>
         ))}
+            {user && <Link to="/dashboard" className="bg-green-800 text-white font-bold py-2 px-4 rounded max-sm:text-sm">Dashboard</Link>}
             {user ? <button className="bg-green-800 text-white font-bold py-2 px-4 rounded max-sm:text-sm" onClick={handleLogout}>Cerrar Sesión</button> :<Link to="/login" className="bg-green-800 text-white font-bold py-2 px-4 rounded ml-3 max-sm:text-sm">Iniciar Sesión</Link>}
         </ul>
     </div>
